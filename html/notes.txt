@@ -1,0 +1,14 @@
+HTML ZTM Notes
+
+Image
+<img src=cat.jpg" alt="Cat" width="300">
+
+Link
+<a href="link.html">Click here!</a>
+
+W3 Schools HTML page - https://www.w3schools.com/html/default.asp
+
+<ul> = Unordered List
+<ol> = Ordered List
+<li> = List Item
+<br> = Line Break
