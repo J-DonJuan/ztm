@@ -1,10 +1,14 @@
 HTML ZTM Notes
 
+HTML has elements & attributes.
+
 Image
 <img src=cat.jpg" alt="Cat" width="300">
 
 Link
 <a href="link.html">Click here!</a>
+Relative path <a href="test/link.html> Click here! </a>
+Absolute link <a href= "https://samplepage.html"> Sample page! </a>
 
 W3 Schools HTML page - https://www.w3schools.com/html/default.asp
 
@@ -12,3 +16,48 @@ W3 Schools HTML page - https://www.w3schools.com/html/default.asp
 <ol> = Ordered List
 <li> = List Item
 <br> = Line Break
+
+<form>
+    First Name: <input type="text"><br>
+    Last Name: <input type="text">
+    Email: <input type="text">
+</form>
+
+
+query strings - Form information attached to URL
+
+query strings & URL encoding
+register.html?firstname=asdf&lastname=asdf&gender=on
+ ?firstname=asdf
+ &lastname=asdf
+
+
+ HTML tags:
+ form
+ input
+ select
+
+<div> is often used to divide content
+<span> is an inline element so we can style more specific things
+
+ <!-- HTML comment goes here -->
+
+ HTML vs HTML 5
+
+HTML 5 is backwards compatible with older versions of HTML.
+
+Semantic Elements help make HTML more semantically descriptive by using HTML tags that are 
+more descriptive.
+
+<nav>
+<footer>
+
+
+
+
+
+
+
+
+
+
