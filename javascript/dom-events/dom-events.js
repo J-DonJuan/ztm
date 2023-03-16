@@ -1,21 +1,26 @@
-var button = document.getElementById("button");
-var input = document.getElementById("userinput");
+var button = document.querySelector("button");
+var input = document.querySelector("input");
 var ul = document.querySelector("ul");
 
+const appendLi = () => {
+    var newChild = document.createElement("li");
+    newChild.appendChild(document.createTextNode(input.value));
+    ul.appendChild(newChild);
+    input.value="";
+}
+
+const inputLength = () => {
+    return input.value.length;
+}
+
 button.addEventListener("click", function(){
-    if (input.value.length > 0) {
-    var li = document.createElement("li");
-    li.appendChild(document.createTextNode(input.value));
-    ul.appendChild(li);
-    input.value = "";
-}})
+    if (inputLength() > 0){
+        appendLi();
+    }
+})
 
 input.addEventListener("keypress", function(event){
-    if (input.value.length > 0 && event.code === "Enter") {
-    var li = document.createElement("li");
-    li.appendChild(document.createTextNode(input.value));
-    ul.appendChild(li);
-    input.value = "";
-}})
-
-console.log(input);
+    if (inputLength() > 0 && event.code === "Enter"){
+        appendLi();
+    }
+})
