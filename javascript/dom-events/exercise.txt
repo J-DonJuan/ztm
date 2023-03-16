@@ -1,0 +1,4 @@
+-Use JavaScript to append input items to the end of the shopping list.
+-If input value is empty don't add anything to the list.
+-Make the input box clear out the text after adding it to the list.
+-Make it so clicking the button or pressing enter adds the new item.
