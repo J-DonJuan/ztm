@@ -1,4 +1,14 @@
--Use JavaScript to append input items to the end of the shopping list.
--If input value is empty don't add anything to the list.
--Make the input box clear out the text after adding it to the list.
--Make it so clicking the button or pressing enter adds the new item.
+Use JavaScript to append input items to the end of the shopping list.
+
+Make the input box clear out the text after adding it to the list.
+
+If input value is empty don't add anything to the list.
+
+Make it so both pressing enter or clicking the button adds the new item.
+
+If you click on the list item, it toggles the .done class on and off.
+
+Add buttons next to each list item to delete the item when clicked on its corresponding delete button.
+
+BONUS: When adding a new list item, it automatically adds the delete button next to it 
+(hint: be sure to check if new items are clickable too!)
