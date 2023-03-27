@@ -20,7 +20,11 @@ class Animal {
     constructor(name, type, color){
         this.name = name;
         this.type = type;
-        this.color = color;
+        this._color = color;
+    }
+
+    get color(){
+        return `Her name is ${this._color}`
     }
 }
 
@@ -33,5 +37,7 @@ class Mammal extends Animal {
 
 const keely = new Animal("Cali", "cat", "Black, Orange, White");
 const cow = new Mammal("Moo", "Cow", "Black and White");
+console.log(keely.color);
+cow.moo();
 
 
