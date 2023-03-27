@@ -1,7 +1,12 @@
-const array = [1, 2, 3, 10];
+class Player {
+    constructor (name, position){
+        this.name = name;
+        this.position = position;
+    }
 
-const reduceArray = array.reduce((accumulator, num) => {
-    return accumulator + num
-}, 27);
+    runForTen() {
+        console.log(`${this.name} is a ${this.position} and he just ran for 10 yards!`)
+    }
+}
 
-console.log(reduceArray)
+const john = new Player("John", "Running Back");
