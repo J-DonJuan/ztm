@@ -1,12 +1,5 @@
-class Player {
-    constructor (name, position){
-        this.name = name;
-        this.position = position;
-    }
-
-    runForTen() {
-        console.log(`${this.name} is a ${this.position} and he just ran for 10 yards!`)
-    }
+let obj = {
+    name0: 'Santa',
+    name1: 'Rudolph',
+    name2: 'Grinch'
 }
-
-const john = new Player("John", "Running Back");
