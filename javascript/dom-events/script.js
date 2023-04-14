@@ -14,12 +14,6 @@ function createListElement() {
 	addRemoveButton(li);
 }
 
-function addRemoveButton(element) {
-	var removeButton = document.createElement("button");
-	removeButton.appendChild(document.createTextNode("Delete Button"));
-	element.appendChild(removeButton);
-}
-
 function addListAfterClick() {
 	if (inputLength() > 0) {
 		createListElement();
@@ -35,6 +29,12 @@ function addListAfterKeypress(event) {
 function toggleStrikeThrough(event){
 	var li = event.target;
 	li.classList.toggle("done");
+}
+
+function addRemoveButton(element) {
+	var newButton = document.createElement("button");
+	newButton.appendChild(document.createTextNode("Delete Button"));
+	element.appendChild(newButton);
 }
 
 
