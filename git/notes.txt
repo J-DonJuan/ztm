@@ -4,3 +4,5 @@ git add . // Recursively add all changes
 
 git branch // See all branches
 git branch <name of new branch> // Create branch
+
+git checkout <branch name> // Switch to new branch
