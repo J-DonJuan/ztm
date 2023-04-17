@@ -1,0 +1,6 @@
+git clone <github link>
+git add <file name>
+git add . // Recursively add all changes
+
+git branch // See all branches
+git branch <name of new branch> // Create branch
