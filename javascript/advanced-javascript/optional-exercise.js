@@ -13,24 +13,50 @@ Then Make that function auto-dect the formats so that if you enter HEX color for
 and if you enter RGB color format it returns HEX. */
 
 // Q1
-let test_input = [1,2,4,591,392,391,2,5,10,2,1,1,1,20,20];
+let sampleInput = [1,2,4,591,392,391,2,5,10,2,1,1,1,20,20];
 
-// Sort Array
-test_input.sort((a,b) => a - b);
-console.log(test_input);
+const cleanRoom = (array) => {
+    // Sort Array
+    array.sort((a,b) => a - b);
 
-// Figure out which inputs repeat
-let repeatArray = [];
-test_input.forEach((element, i) => {
-    if (element == test_input[i + 1]) {
-        repeatArray.push(element);
+    // Initialize result array that we will fill in
+    let result = [];
+
+    // Initialize new group with index 0 of array
+    let currentGroup = [array[0]]
+
+    // Loop through sorted array starting from index 1 (Index 0 is already in currentGroup array)
+    for (i = 1; i < array.length; i++){
+        if (array[i] === array[i-1]){
+            currentGroup.push(array[i]);
+        } else {
+            result.push(currentGroup.length > 1 ? currentGroup : currentGroup[0])
+            currentGroup = [array[i]];
+        }
     }
-})
+    return result;
+}
 
-repeatArray = [...new Set(repeatArray)];
-console.log(repeatArray);
-
-// Iterate over unique array, counting how many times each is in the original array
+let answer = cleanRoom(sampleInput);
+console.log(answer);
 
 
-// Build new array
+
+// Check if current element matches previous element
+
+// If it does match, add current element to "current" array
+
+// If it does NOT match, add current element as new index. Check "current" array length
+
+
+
+// // Figure out which inputs repeat
+// let repeatArray = [];
+// test_input.forEach((element, i) => {
+//     if (element == test_input[i + 1]) {
+//         repeatArray.push(element);
+//     }
+// })
+
+// repeatArray = [...new Set(repeatArray)];
+// console.log(repeatArray);
