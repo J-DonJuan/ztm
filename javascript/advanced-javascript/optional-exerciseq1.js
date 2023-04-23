@@ -40,23 +40,3 @@ const cleanRoom = (array) => {
 let answer = cleanRoom(sampleInput);
 console.log(answer);
 
-
-
-// Check if current element matches previous element
-
-// If it does match, add current element to "current" array
-
-// If it does NOT match, add current element as new index. Check "current" array length
-
-
-
-// // Figure out which inputs repeat
-// let repeatArray = [];
-// test_input.forEach((element, i) => {
-//     if (element == test_input[i + 1]) {
-//         repeatArray.push(element);
-//     }
-// })
-
-// repeatArray = [...new Set(repeatArray)];
-// console.log(repeatArray);
