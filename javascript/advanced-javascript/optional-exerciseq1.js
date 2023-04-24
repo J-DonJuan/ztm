@@ -78,7 +78,7 @@ const cleanRoom = (array) => {
     // Sort and correctly organize string array (which is temporarily all numbers)
     sortNumberArray(stringArray);
 
-    // Change string array back into strings
+    // Change string array from nums back into strings
     convertNumArrayToStrings(stringArray);
 
     // Push all elements from stringArray into NumArray as individual elements
