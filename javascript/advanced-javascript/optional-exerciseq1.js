@@ -35,6 +35,12 @@ const convertStringArrayToNums = (array) => {
     }
 }
 
+const convertNumArrayToStrings = (array) => {
+    for (i = 0; i < array.length; i++){
+        array[i] = String(array[i]);
+    }
+}
+
 const sortNumberArray = (array) => {
     // Sort Array
     array.sort((a,b) => a - b);
@@ -57,6 +63,11 @@ const sortNumberArray = (array) => {
     return result;
 }
 
+const pushAllElements = (array1, array2) => {
+    for (i = 0; i < array2.length; i++){
+        array1.push(array2[i]);
+    }
+}
 
 const cleanRoom = (array) => {
     // Separate into two arrays, one with strings, one with numbers
@@ -67,16 +78,22 @@ const cleanRoom = (array) => {
 
     // Sort and correctly organize number array
     let numArray = sortNumberArray(array);
-    return numArray;
 
+    // Sort and correctly organize string array (which is temporarily all numbers)
+    sortNumberArray(stringArray);
+
+    // Change string array back into strings
+    convertNumArrayToStrings(stringArray);
+
+    // Push all elements from stringArray into NumArray as individual elements
+    pushAllElements(numArray, stringArray);
+
+    return numArray;
 }
 
 let answer = cleanRoom(sampleInputStrings);
 console.log(answer);
 
-// Create function that takes in an array
-
-
-
-
+let answerNumsOnly = cleanRoom(sampleInput);
+console.log(answerNumsOnly);
 
