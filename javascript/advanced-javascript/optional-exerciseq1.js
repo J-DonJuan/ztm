@@ -14,8 +14,28 @@ and if you enter RGB color format it returns HEX. */
 
 // Q1
 let sampleInput = [1,2,4,591,392,391,2,5,10,2,1,1,1,20,20];
+let sampleInputStrings = [1,2,4,591,392,391,"17", "2", "2", "3",2,5,10,2,1,1,1,20,20]
 
-const cleanRoom = (array) => {
+
+const separateStringsAndNumbers = (array) => {
+    let stringArray = [];
+    for (i = 0; i < array.length; i++){
+        if (typeof(array[i]) === 'string') {
+            stringArray.push(array[i]);
+            array.splice(i, 1);
+            i--;
+        }
+    }
+    return stringArray;
+}
+
+const convertStringArrayToNums = (array) => {
+    for (i = 0; i < array.length; i++){
+        array[i] = Number(array[i]);
+    }
+}
+
+const sortNumberArray = (array) => {
     // Sort Array
     array.sort((a,b) => a - b);
 
@@ -37,6 +57,26 @@ const cleanRoom = (array) => {
     return result;
 }
 
-let answer = cleanRoom(sampleInput);
+
+const cleanRoom = (array) => {
+    // Separate into two arrays, one with strings, one with numbers
+    let stringArray = separateStringsAndNumbers(array);
+
+    // Temporarily convert string array into numbers
+    convertStringArrayToNums(stringArray);
+
+    // Sort and correctly organize number array
+    let numArray = sortNumberArray(array);
+    return numArray;
+
+}
+
+let answer = cleanRoom(sampleInputStrings);
 console.log(answer);
+
+// Create function that takes in an array
+
+
+
+
 
